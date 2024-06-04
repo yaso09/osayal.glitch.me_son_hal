@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oy Kullanın</title>
+    <style>
+        /* Genel form stili */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Bilet girme yeri */
+#bilet {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 93%;
+}
+
+/* Aday seçme (select) */
+#aday {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Gönderme butonu */
+#gonder {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <center><h1>Oy Kullanın</h1></center>
+    <form action="/api" method="post">
+        <input id="bilet" type="text" name="ticket" placeholder="Bileti girin" required>
+        <select name="aday" id="aday" required>
+            <option value="baris">Barış Manço</option>
+            <option value="neo">Neo</option>
+            <option value="marny">Marny Monroe</option>
+            <option value="sirinler">Şirinler</option>
+            <option value="Thor">Thor</option>
+            <option value="2pac">2PAC</option>
+        </select>
+        <input id="gonder" type="submit" value="Gönder">
+    </form>
+</body>
+</html>
